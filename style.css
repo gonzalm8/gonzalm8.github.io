@@ -1,0 +1,257 @@
+/* Right Block, Nav bar*/
+/* Left Block*/
+/*Hover color*/
+html {
+  font-family: "Frank Ruhl Libre", serif;
+  color: black;
+}
+
+body {
+  background-color: #ecf8f8;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 5%;
+  width: 70%;
+  margin: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 70%;
+  margin: 0 auto 10px auto;
+  border-bottom: 4px solid #6290c8;
+  font-size: 1.25em;
+}
+.navigation #nav-list a {
+  color: black;
+  text-decoration: none;
+}
+.navigation #nav-list a:visited {
+  color: black;
+}
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 4px;
+}
+.navigation img {
+  width: 100%;
+}
+.navigation a {
+  width: 20%;
+}
+
+.banner {
+  grid-area: banner;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-button {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 15px 15px 10px 15px;
+  width: 125px;
+  text-align: center;
+  border-bottom: 4px solid #6290c8;
+}
+
+.active, .nav-button:hover {
+  background-color: #ecf8f8;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 4px solid #fed9b7;
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-areas: "banner" "main" "footer";
+  grid-template-rows: 0.25fr 1fr 0.1fr;
+  margin: 0 auto;
+  height: 100%;
+  width: 72%;
+  background-color: #ffffff;
+}
+
+.main-content {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "content news" "content news" "content news";
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 25px 15px 0 15px;
+}
+
+.left-box {
+  grid-area: content;
+  padding-bottom: 15px;
+  margin-right: 15px;
+}
+.left-box h1, .left-box p {
+  padding: 0 15px;
+}
+
+.right-box {
+  grid-area: news;
+  border-left: 2px solid #6290c8;
+}
+.right-box a {
+  text-decoration: none;
+  color: #fed9b7;
+}
+
+.main-text {
+  grid-area: content;
+  margin-top: 100px;
+  /* img{
+      position: relative;
+      padding: 0 5px;
+      max-width:100%;
+  } */
+}
+
+.news-feed {
+  padding: 0 15px;
+}
+.news-feed hr {
+  color: #6290c8;
+  width: 95%;
+}
+
+.shop-card-container {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 15px 0;
+  background-color: #fed9b7;
+  border-radius: 5px;
+  font-size: 1.25em;
+  color: black;
+}
+.shop-card-container a {
+  text-decoration: none;
+  color: black;
+}
+.shop-card-container span {
+  font-size: 2em;
+  color: black;
+}
+
+.shop-card-container:hover {
+  background-color: #6290c8;
+  color: #fed9b7;
+}
+.shop-card-container:hover span {
+  color: #fed9b7;
+}
+
+.slideshow-container {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container img {
+  width: 100%;
+}
+
+.slides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.footer {
+  grid-area: footer;
+  background-color: #ffffff;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.9em;
+  padding: 15px 0;
+}
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #6290c8;
+}
+
+/*# sourceMappingURL=style.css.map */
