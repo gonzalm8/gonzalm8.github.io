@@ -1,22 +1,3 @@
-
-//Active navigation changes
-let navList = document.getElementById("nav-list");
-let navButton = navList.getElementsByClassName("nav-button");
-
-console.log(navButton.length);
-for (let j = 0; j < navButton.length; j++) {
-    console.log(j + " li element has id " + navButton[j].id);
-    navButton[j].addEventListener("click", function () {
-        let button = document.getElementsByClassName("active");
-
-        if (button.length > 0) {
-            navButton[j].className = navButton[j].className.replace(" active", "");
-        }
-
-        this.className += " active";
-    });
-}
-
 //Homepage Slider Functions
 var slideIndex = 1;
 showSlides(slideIndex);
